@@ -17,9 +17,13 @@ $(function() {
 
 function addButtonClick(event) {
   event.preventDefault();
-  var classname = ($("li").length % 2 === 0 ? "grey" : "light-blue");
-  $list = $("#list").append("<li>"+ $("#task").val() +"</li>");
-  $("li").last().addClass(classname);
+  // append the input task as a list item to the list
+  $("#list").append("<li>"+ $("#task").val() +"</li>");
+  // get bgcolor based on whether the element is even or odd
+  var bgcolor = ($("li").length % 2 === 0 ? "grey" : "lightblue");
+  // apply bgcolor name
+  $("li").last().css("background", bgcolor);
+  // reset input task to blank again
   $("#task").val("");
 }
 
