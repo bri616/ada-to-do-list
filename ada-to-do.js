@@ -3,15 +3,6 @@ $(function() {
 
   $("#remTask").click(remButtonClick);
 
-  document.getElementsByTagName("ul")[0].addEventListener("click",function(e) {
-    // e.target is our targetted element.
-    // try doing console.log(e.target.nodeName), it will result LI
-    if(e.target && e.target.nodeName == "LI") {
-        console.log(e.target.innerHTML + " was clicked");
-        theTarget = e.target;
-        theTarget.classList.contains("done") ? theTarget.classList.remove("done") : theTarget.classList.add("done");
-    }
-  });
 });
 
 function addButtonClick(event) {
@@ -22,8 +13,14 @@ function addButtonClick(event) {
   var bgcolor = ($("li").length % 2 === 0 ? "grey" : "lightblue");
   // apply bgcolor name
   $("li").last().css("background", bgcolor);
+  // add clickhandler to this item
+  $("li").last().click(doneClickHandler);
   // reset input task to blank again
   $("#task").val("");
+}
+
+function doneClickHandler() {
+  $(this).toggleClass("done");
 }
 
 function remButtonClick(event) {
