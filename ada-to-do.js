@@ -1,8 +1,7 @@
 $(function() {
   $("#addTask").click(addButtonClick);
 
-  var rembutton = document.getElementById("remTask");
-  rembutton.onclick = remButtonClick;
+  $("#remTask").click(remButtonClick);
 
   document.getElementsByTagName("ul")[0].addEventListener("click",function(e) {
     // e.target is our targetted element.
