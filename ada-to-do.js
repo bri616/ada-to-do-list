@@ -17,13 +17,9 @@ $(function() {
 
 function addButtonClick(event) {
   event.preventDefault();
-
-  var $list = $("#list");
-
   var classname = ($("li").length % 2 === 0 ? "grey" : "light-blue");
-
-  $list.append("<li class='"+ classname +"'>"+ $("#task").val() +"</li>");
-
+  $list = $("#list").append("<li>"+ $("#task").val() +"</li>");
+  $("li").last().addClass(classname);
   $("#task").val("");
 }
 
