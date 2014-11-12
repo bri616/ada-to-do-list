@@ -20,8 +20,7 @@ function addButtonClick(event) {
 
   var $list = $("#list");
 
-  var $numofitems = $("li").length;
-  var classname = ($numofitems % 2 === 0 ? "grey" : "light-blue");
+  var classname = ($("li").length % 2 === 0 ? "grey" : "light-blue");
 
   $list.append("<li class='"+ classname +"'>"+ $("#task").val() +"</li>");
 
