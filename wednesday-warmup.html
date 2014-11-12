@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang = "en">
+<head>
+  <meta charset="utf-8">
+  <title>Wednesday Warmup</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <style>
+    .red { background-color: red; }
+    div {
+      width: 300px;
+      height: 200px;
+      margin: auto;
+      text-align: center;
+      }
+  </style>
+  <script>
+window.onload = init;
+function init() {
+  $(".first").click(function() {
+    $(this).addClass("red");
+    $(this).css("border", "2px solid black").fadeOut("slow", function() {
+      $(this).fadeIn("fast");
+    });
+  });
+}
+
+  </script>
+</head>
+<body>
+  <div class="first">
+    Hello World!
+
+  </div>
+</body>
+</html>
