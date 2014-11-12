@@ -28,8 +28,5 @@ function addButtonClick(event) {
 
 function remButtonClick(event) {
   event.preventDefault();
-  var liItems = document.getElementsByTagName("li");
-  var lastListItem = liItems[liItems.length-1];
-  console.log(lastListItem);
-  lastListItem.remove();
+  $("li").last().remove();
 }
