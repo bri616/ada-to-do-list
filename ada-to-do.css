@@ -27,5 +27,7 @@ section {
 
 
 .done {
-  text-decoration: line-through;
+  background-image: url(marker_underline.gif);
+  background-repeat: no-repeat;
+  background-color: transparent;
   }

@@ -15,7 +15,7 @@ function addButtonClick(event) {
   // get bgcolor based on whether the element is even or odd
   var bgcolor = ($("li").length % 2 === 0 ? "grey" : "lightblue");
   // apply bgcolor name
-  $("li").last().css("background", bgcolor);
+  $("li").last().css("background-color", bgcolor);
   // add clickhandler to this item
   $("li").last().click(doneClickHandler);
   // reset input task to blank again
