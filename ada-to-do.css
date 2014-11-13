@@ -13,7 +13,12 @@ li {
 }
 
 header {
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
+  text-align: center;
+  padding: 40px;
+  font-family: 'Rock Salt', cursive;
+  color: white;
+  background-color: #0a9468;
 }
 
 section {
